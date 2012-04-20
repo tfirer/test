@@ -1,4 +1,7 @@
 #!/usr/bin/perl
+##
+## auto bu dingcang
+##
 use strict;
 use warnings;
 use LWP::UserAgent;
