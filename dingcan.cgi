@@ -9,6 +9,8 @@ use HTTP::Cookies;
 use Encode;
 use HTTP::Headers;
 
+my $base_url = "http://10.132.64.191:9000";
+
 my $ua=LWP::UserAgent->new(keep_alive=>1);
    $ua->cookie_jar(HTTP::Cookies->new(file=>'get_page_login.cookies', autosave=>1));
 
@@ -26,9 +28,9 @@ sub log_in{
             pwd=>198811120,
             x=>35,
             y=>21,
-            url=>"http://10.132.64.207:9000/",
+            url=>$base_url,
           ];
-    my $res = $ua->post('http://10.132.64.207:9000/portal/auth/login_check',$loginaccount);
+    my $res = $ua->post("$base_url/portal/auth/login_check",$loginaccount);
     if ($res->code == 302){
         printf ("login success...  code->%s : message->%s\n",$res->code,$res->message);    
     }else{
@@ -48,7 +50,7 @@ sub bu_din_cang{
             rest_id=>92,
             order_time=>$time,
     ];
-    my $res =  $ua->post('http://10.132.64.207:9000/dingcan/recipe/save',$content);
+    my $res =  $ua->post("$base_url/dingcan/recipe/save",$content);
     if ($res->code == 200 ){
         printf ("不订餐成功...  code->%s : message->%s\n",$res->code,$res->message); 
     }else{
