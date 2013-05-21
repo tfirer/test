@@ -12,3 +12,4 @@ edit in github
 edit in github again
 edit in windows
 test fetch
+test CONFLICT
