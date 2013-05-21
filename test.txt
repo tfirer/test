@@ -13,3 +13,4 @@ edit in github again
 edit in windows
 test fetch
 test CONFLICT
+test CONFLICT win7
