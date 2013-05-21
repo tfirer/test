@@ -12,5 +12,5 @@ edit in github
 edit in github again
 edit in windows
 test fetch
-test CONFLICT
+test CONFLICT github
 test CONFLICT win7
