@@ -13,4 +13,4 @@ edit in github again
 edit in windows
 test fetch
 test CONFLICT github github
-test CONFLICT win7
+test CONFLICT win777777
