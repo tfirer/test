@@ -14,3 +14,4 @@ my $ua=LWP::UserAgent->new(keep_alive=>1);
 
 my $res = $ua->get('http://10.132.64.227/html5/binLiu.htm');
 print $res->content;
+aaaaa
